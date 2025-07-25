@@ -1336,7 +1336,7 @@ class Result(_WithKeys, ResultInternal[Row[Unpack[_Ts]]]):
             else:
                 break
 
-    def fetchall(self) -> Sequence[Row[Unpack[_Ts]]]:
+    def fetchall(self) -> Sequence[Row[Unpack[_R]]]:
         """A synonym for the :meth:`_engine.Result.all` method."""
 
         return self._allrows()
